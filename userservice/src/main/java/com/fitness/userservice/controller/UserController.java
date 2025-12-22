@@ -25,5 +25,10 @@ public class UserController {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
+    @GetMapping("/{id}/validate")
+    public ResponseEntity<Boolean> validateUser(@PathVariable String id) {
+        return ResponseEntity.ok(userService.existByUserId(id));
+    }
+
 
 }
