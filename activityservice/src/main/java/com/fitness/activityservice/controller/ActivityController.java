@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/activities")
 @AllArgsConstructor
 public class ActivityController {
 
     private final ActivityService activityService;
 
-    @PostMapping("/activities")
+    @PostMapping
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest activityRequest) {
         return ResponseEntity.ok(activityService.trackActivity(activityRequest));
     }

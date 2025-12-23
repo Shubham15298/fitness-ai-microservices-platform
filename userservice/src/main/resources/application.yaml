@@ -12,6 +12,11 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+    instance-id: ${spring.application.name}:${server.port}
+
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
