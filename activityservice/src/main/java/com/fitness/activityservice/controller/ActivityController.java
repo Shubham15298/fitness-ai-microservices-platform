@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @AllArgsConstructor
 public class ActivityController {
 
-    private final ActivityService activityService;
+    private ActivityService activityService;
 
     @PostMapping
     public ResponseEntity<ActivityResponse> trackActivity(@RequestBody ActivityRequest activityRequest) {
