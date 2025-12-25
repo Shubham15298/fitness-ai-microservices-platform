@@ -8,7 +8,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 import java.util.Map;
 
 @Service
-//@RequiredArgsConstructor As using constructor for WebClient so commented it
 public class GeminiService {
 
     private final WebClient webClient;
